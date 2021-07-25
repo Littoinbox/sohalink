@@ -14,6 +14,7 @@
             <li class="active"><a href="/">На сайт</a></li>
             <li><a href="{{ route('AdminMain') }}">Главна</a></li>
             <li><a href="{{ route('AdminQuize') }}">Квизы</a></li>
+            <li><a href="{{ route('AdminCalendar') }}">Календарь событий</a></li>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
