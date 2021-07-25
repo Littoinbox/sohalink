@@ -16,7 +16,7 @@ class CreateProjecktCalendarsTable extends Migration
         Schema::create('projeckt_calendars', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('imgage')->nullable(true);
+            $table->string('image')->nullable(true);
             $table->dateTime('date_start');
             $table->text('description');
             $table->timestamps();
