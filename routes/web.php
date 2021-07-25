@@ -27,6 +27,7 @@ Route::get('/event/1', function(){
 
 Route::group(['middleware' => ['role:admin']], function () {
    Route::get("/admin", [App\Http\Controllers\Admin\AdminControllers::class, "index"])->name('AdminMain');
+   Route::get('/admin/quize', [\App\Http\Controllers\Admin\QuizeController::class, "index"])->name('AdminQuize');
 });
 
 Route::get('/childpage', function (){
