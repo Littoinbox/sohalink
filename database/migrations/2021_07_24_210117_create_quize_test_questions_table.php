@@ -18,7 +18,6 @@ class CreateQuizeTestQuestionsTable extends Migration
             $table->integer('id_quize')->nullable(false);
             $table->text('question')->nullable(false);
             $table->text('answer')->nullable(false);
-
             $table->timestamps();
         });
     }

@@ -19,6 +19,10 @@ class CreateQuizeTestsTable extends Migration
             $table->string('image');
             $table->text('description');
             $table->string('introText');
+            $table->text('thirty_persent_right');
+            $table->text('fifty_persent_right');
+            $table->text('seventy_persent_right');
+            $table->text('hundred_right');
             $table->timestamps();
         });
     }
