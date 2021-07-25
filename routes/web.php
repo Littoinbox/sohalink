@@ -28,6 +28,8 @@ Route::get('/event/1', function(){
 Route::group(['middleware' => ['role:admin']], function () {
    Route::get("/admin", [App\Http\Controllers\Admin\AdminControllers::class, "index"])->name('AdminMain');
    Route::get('/admin/quize', [\App\Http\Controllers\Admin\QuizeController::class, "index"])->name('AdminQuize');
+   Route::get('/admin/addquize', [\App\Http\Controllers\Admin\QuizeController::class, "addQuize"])->name('addQuize');
+   Route::post('/admin/addquize', [\App\Http\Controllers\Admin\QuizeController::class, "addQuizePost"]);
 });
 
 Route::get('/childpage', function (){

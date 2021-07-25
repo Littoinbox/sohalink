@@ -14,4 +14,11 @@ class QuizeController extends Controller
         $data= $queize->all();
         return view('Admin/Quize', ['data'=>$data]);
     }
+    function addQuize(){
+        return view('Admin/AddQuize');
+    }
+
+    function addQuizePost($request){
+
+    }
 }
