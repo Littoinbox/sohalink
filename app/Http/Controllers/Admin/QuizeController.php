@@ -18,7 +18,10 @@ class QuizeController extends Controller
         return view('Admin/AddQuize');
     }
 
-    function addQuizePost($request){
-
+    function addQuizePost(\Illuminate\Http\Request $request){
+            $validate = $request->validate([
+                'name'=>'required|max:255',
+                'introText' =>'max:255'
+                ]);
     }
 }
