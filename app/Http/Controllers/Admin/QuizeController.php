@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\QuizeTest;
+use App\Models\QuizeTestQuestion;
 use Illuminate\Http\Request;
 
 class QuizeController extends Controller
@@ -23,10 +24,10 @@ class QuizeController extends Controller
 
     function addQuizePost(Request $request)
     {
-
+        $valid = $request->validate([
+            'title'=>'required']);
         $img = $request->file('fileImg');
 
-        //$imgSrc = "/upload/qiize/" . $img->;
         if (!empty($img)) {
             $imgSrc =$img->store("/upload/queize/");
         }
@@ -35,13 +36,22 @@ class QuizeController extends Controller
         }
         $data = $request->all();
         $data['image']=$imgSrc;
-
        // dd($data);
-
-        if (QuizeTest::create($data))
+        $queize =QuizeTest::create($data);
+        if ($queize)
         {
-            return redirect(route('addQuizePost'));
+            return redirect(route('addQuizeQuestion', $queize->id));
         }
-
     }
+    function addQuizeQuestion($id){
+        return view('Admin/AddQuizeQuestion', ['id' => $id]);
+    }
+    function addQuizeQuestionPost($id, Request $request)
+    {
+        $data = $request->all();
+        $data['answer']= serialize($data['answer']);
+        $model = QuizeTestQuestion::create($data);
+        return redirect(route('addQuizeQuestion', $model->id));
+    }
+
 }

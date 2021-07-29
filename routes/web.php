@@ -30,6 +30,10 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/admin/quize', [\App\Http\Controllers\Admin\QuizeController::class, "index"])->name('AdminQuize');
     Route::get('/admin/addquize', [\App\Http\Controllers\Admin\QuizeController::class, "addQuize"])->name('addQuize');
     Route::post('/admin/addquize', [\App\Http\Controllers\Admin\QuizeController::class, "addQuizePost"]);
+
+    Route::get('/admin/addquize/question/{id}', [\App\Http\Controllers\Admin\QuizeController::class, "addQuizeQuestion"])->name('addQuizeQuestion');
+    Route::post('/admin/addquize/question/{id}', [\App\Http\Controllers\Admin\QuizeController::class, "addQuizeQuestionPost"]);
+
     Route::get('/admin/projectCalendar', [\App\Http\Controllers\Admin\ProjectCalendarsControllers::class, "index"])->name('AdminCalendar');
     Route::get('/admin/addProjeckt', [\App\Http\Controllers\Admin\ProjectCalendarsControllers::class, "addProjeckt"])->name('addProjeckt');
     Route::post('/admin/addProjeckt', [\App\Http\Controllers\Admin\ProjectCalendarsControllers::class, "addProjecktPost"]);

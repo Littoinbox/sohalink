@@ -2,18 +2,17 @@
 
 @section('content')
     <form method="post" enctype="multipart/form-data">
-
-
+        <div class="form-group">
+            <label for="title">Название квиза</label>
+            <input type="text"  value="{{old('title')}}" name="title" id="title" placeholder="Название квиза" class="form-control" >
+        </div>
 
         <div class="form-group">
             <label for="img">Картинка Квиза</label>
             <input type="file" value="{{old('fileImg')}}" name="fileImg" id="img" placeholder="Картинка квиза" class="form-control">
         </div>
 
-        <div class="form-group">
-            <label for="title">Название квиза</label>
-            <input type="text"  value="{{old('title')}}" name="title" id="title" placeholder="Название квиза" class="form-control" >
-        </div>
+
         <div class="form-group">
             <label for="introText">Вступистельный текст</label>
             <input type="text" value="{{old('introText')}}" name="introText" id="introText" placeholder="Вступистельный текст" class="form-control">
