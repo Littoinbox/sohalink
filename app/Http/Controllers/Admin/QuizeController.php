@@ -9,19 +9,39 @@ use Illuminate\Http\Request;
 class QuizeController extends Controller
 {
     //
-    function index(){
+    function index()
+    {
         $queize = new QuizeTest();
-        $data= $queize->all();
-        return view('Admin/Quize', ['data'=>$data]);
+        $data = $queize->all();
+        return view('Admin/Quize', ['data' => $data]);
     }
-    function addQuize(){
+
+    function addQuize()
+    {
         return view('Admin/AddQuize');
     }
 
-    function addQuizePost(\Illuminate\Http\Request $request){
-            $validate = $request->validate([
-                'name'=>'required|max:255',
-                'introText' =>'max:255'
-                ]);
+    function addQuizePost(Request $request)
+    {
+
+        $img = $request->file('fileImg');
+
+        //$imgSrc = "/upload/qiize/" . $img->;
+        if (!empty($img)) {
+            $imgSrc =$img->store("/upload/queize/");
+        }
+        else {
+            logger('Файл не загрузился!');
+        }
+        $data = $request->all();
+        $data['image']=$imgSrc;
+
+       // dd($data);
+
+        if (QuizeTest::create($data))
+        {
+            return redirect(route('addQuizePost'));
+        }
+
     }
 }

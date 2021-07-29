@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class QuizeTest extends Model
 {
     use HasFactory;
-    protected $fillable=['name ', 'image', 'description', 'introText', 'thirty_persent_right', 'fifty_persent_right', 'seventy_persent_right', 'hundred_right'];
+    protected $fillable= ['title', 'image', 'description', 'introText', 'thirty_persent_right', 'fifty_persent_right', 'seventy_persent_right', 'hundred_right'];
 }

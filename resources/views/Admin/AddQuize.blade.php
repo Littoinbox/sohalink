@@ -1,16 +1,18 @@
 @extends('layouts.admin')
 
 @section('content')
-    <form method="post">
-        @csrf
+    <form method="post" enctype="multipart/form-data">
 
-        <div class="form-group">
-            <label for="name">Название квиза</label>
-            <input type="text"  value="{{old('name')}}" name="name" id="name" placeholder="Название квиза" class="form-control" required>
-        </div>
+
+
         <div class="form-group">
             <label for="img">Картинка Квиза</label>
             <input type="file" value="{{old('fileImg')}}" name="fileImg" id="img" placeholder="Картинка квиза" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="title">Название квиза</label>
+            <input type="text"  value="{{old('title')}}" name="title" id="title" placeholder="Название квиза" class="form-control" >
         </div>
         <div class="form-group">
             <label for="introText">Вступистельный текст</label>
@@ -36,7 +38,7 @@
             <label for="hundred_right">100% отвеченых вопросов</label>
             <textarea name="hundred_right" id="hundred_right">{{old('hundred_right')}}</textarea>
         </div>
-
+        @csrf
         <button type="submit" class="btn btn-success">Создать</button>
     </form>
 @endsection
