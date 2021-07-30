@@ -14,7 +14,7 @@
         });
         $('audio').audioPlayer();
         $('.bx-viewport').css('height', 'auto');
-        $('.bx-viewport').css('min-height', '600px');
+        //$('.bx-viewport').css('min-height', '600px');
         var step = 0;
         var trueAnswer = 0;
         var rightAnswer = 0;
@@ -66,7 +66,7 @@
                         html += "<div class='answers'>";
                         for (var i = 0; i < $resp[0].answer.length; i++) {
                             html += "<div class='answer'><input type='radio' value='" + parseInt(i + 1) + "' " +
-                                "class='answerId'>" + $resp[0].answer[i] + "</div>";
+                                "class='answerId' name='answerId'>" + $resp[0].answer[i] + "</div>";
                         }
                         html += "</div>";
                         $('.quize').html(html);

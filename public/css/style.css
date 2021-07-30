@@ -500,7 +500,7 @@ h2{
     text-align:right;
 }
 .calendarItem{
-    min-height: 600px;
+
     background-color: #fff;
     margin:10px 0;
 }
@@ -704,14 +704,20 @@ transition: all 0.1s linear;
     border: none;
 }
 #video{
-    background-color:#0090a8;
+    /*background-color:#0090a8;*/
+    background-image: url("../images/bg_kolo.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
     padding:20px 0;
     margin-top:40px;
 }
 .videoCurse{
     position: relative;
     display:inline-block;
+    padding: 15px;
+    width: 49%;
 }
+
 .videoCurseImg{
     position: relative;
 }
@@ -1033,7 +1039,7 @@ transition: all 0.1s linear;
 
 body
 {
-   
+
 }
 .audioplayer
 {
@@ -1180,6 +1186,78 @@ body
     font-weight:bold;
 }
 
+.thirty_persent_right, .fifty_persent_right, .seventy_persent_right, .hundred_right{
+    display:none;
+}
+#quize .navbar{
+    background-color:#333333;
+    border-radius: 0;
+
+}
+#quize .navbar-nav
+{
+    margin-top:10px;
+}
+
+
+.qyizBack{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding:30px 15px;
+    margin-top: -20px;
+}
+.quizeQues{
+    text-align:center;
+    background: #fff;
+    width: 760px;
+    padding: 43px 50px 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+.quizeTitle{
+
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom:30px;
+
+}
+.quize{
+    font-size:24px;
+    padding-bottom:30px;
+}
+.quizeNext{
+    display:inline-block;
+    width: 200px;
+    border: 2px solid #1a1a1a;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0 auto;
+    color: #1a1a1a;
+    font-family: "Formular", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+}
+.answerId{
+    display: inline-block;
+    margin-right: 15px !important;
+}
+.answers{
+    display: flex;
+    justify-content: space-around;
+}
+.answer{
+    display: flex;
+    padding:0 20px;
+    align-items: center;
+    font-size: 18px;
+}
+.question{
+    margin-bottom:20px;
+}
+
 
 @media (max-width:768px)
 {
@@ -1267,4 +1345,25 @@ body
     margin: 15px 0;
     text-align: center;
     }
+    .quizeQues{
+        width:auto;
+        padding:30px 15px;
+    }
+    .answers{
+        display:block;
+    }
+    .answer{
+        margin-bottom:20px;
+    }
+    .footer-menu
+    {
+        flex-wrap:wrap;
+    }
+    .videoCurse{
+        width: 100%;
+    }
+    h2{
+        font-size:33px;
+    }
 }
+

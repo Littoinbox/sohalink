@@ -16,7 +16,7 @@
                 <img src="/images/4.jpg" class="img-responsive">
             </div>
             <div class="calendarTitle">Кино под открытым небом</div>
-             <div class="calendarDescription">В парке им. Ю. Гагарина пройдет летний кинозал под открытым небом. 
+             <div class="calendarDescription">В парке им. Ю. Гагарина пройдет летний кинозал под открытым небом.
 Гости увидят фильмы из золотой коллекции «Мосфильма»: «ВИЙ», «Родня», «Формула любви»
 </div>
             <div class="calenderDate">
@@ -158,14 +158,13 @@
         -->
 
 
-            @include("inc.slider")
 </div>
         <div class="container-fluid" id="video">
             <div class="container">
-                <h2>Видеокурсы</h2>
+                <h2 style="color:#fff; text-transform: uppercase;">коллаборации</h2>
                 <div class="videoCurses">
                     <div class="videoCurse">
-                        <div class="videoCurseImg">
+                        <!--<div class="videoCurseImg">
                             <img src="/images/course.jpg" class="img-responsive"/>
                         </div>
                         <div class="videoCurseDesc">
@@ -173,10 +172,11 @@
                                 Курс №1
                             </div>
                             <p>Описание курса</p>
-                        </div>
+                        </div>-->
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/A7W7AY8pVIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="videoCurse">
-                        <div class="videoCurseImg">
+                        <!--<div class="videoCurseImg">
                             <img src="/images/course.jpg" class="img-responsive"/>
                         </div>
                         <div class="videoCurseDesc">
@@ -184,10 +184,11 @@
                                 Курс №1
                             </div>
                             <p>Описание курса</p>
-                        </div>
+                        </div>-->
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/miBCtecf4BM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="videoCurse">
-                        <div class="videoCurseImg">
+                        <!--<div class="videoCurseImg">
                             <img src="/images/course.jpg" class="img-responsive"/>
                         </div>
                         <div class="videoCurseDesc">
@@ -195,10 +196,11 @@
                                 Курс №1
                             </div>
                             <p>Описание курса</p>
-                        </div>
+                        </div>-->
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/_lKL6uPBME0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="videoCurse">
-                        <div class="videoCurseImg">
+                        <!--<div class="videoCurseImg">
                             <img src="/images/course.jpg" class="img-responsive"/>
                         </div>
                         <div class="videoCurseDesc">
@@ -206,7 +208,8 @@
                                 Курс №1
                             </div>
                             <p>Описание курса</p>
-                        </div>
+                        </div>-->
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/7XBnSJwZ7Tw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div><!--
                     <div class="videoCurse">
                         <div class="videoCurseImg">
