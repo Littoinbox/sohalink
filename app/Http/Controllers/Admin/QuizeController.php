@@ -29,7 +29,7 @@ class QuizeController extends Controller
         $img = $request->file('fileImg');
 
         if (!empty($img)) {
-            $imgSrc =$img->store("/upload/queize/");
+            $imgSrc =$img->move("/upload/queize/", $img->getClientOriginalName());
         }
         else {
             logger('Файл не загрузился!');

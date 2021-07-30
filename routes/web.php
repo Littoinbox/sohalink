@@ -42,3 +42,6 @@ Route::group(['middleware' => ['role:admin']], function () {
 Route::get('/childpage', function () {
     return view('childpage', array('title' => 'SakhaLink - Детская страничка'));
 })->name('childpage');
+
+Route::get("/quize/{id}", [\App\Http\Controllers\QuizeController::class, 'mainQuize'])->name('mainQuize');
+Route::post("/quize/{id}", [\App\Http\Controllers\QuizeController::class, 'mainQuizeAjax']);
