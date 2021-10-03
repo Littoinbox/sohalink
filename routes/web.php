@@ -37,6 +37,10 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/admin/projectCalendar', [\App\Http\Controllers\Admin\ProjectCalendarsControllers::class, "index"])->name('AdminCalendar');
     Route::get('/admin/addProjeckt', [\App\Http\Controllers\Admin\ProjectCalendarsControllers::class, "addProjeckt"])->name('addProjeckt');
     Route::post('/admin/addProjeckt', [\App\Http\Controllers\Admin\ProjectCalendarsControllers::class, "addProjecktPost"]);
+
+    Route::get('/admin/editProjeckt/{id}', [\App\Http\Controllers\Admin\ProjectCalendarsControllers::class, "editProjeckt"])->name('editProjeckt');
+    Route::get('/admin/delProjeckt/{id}', [\App\Http\Controllers\Admin\ProjectCalendarsControllers::class, "delProjeckt"])->name('delProjeckt');
+    Route::post('/admin/editProjeckt/{id}', [\App\Http\Controllers\Admin\ProjectCalendarsControllers::class, "editProjecktPost"]);
 });
 
 Route::get('/childpage', function () {

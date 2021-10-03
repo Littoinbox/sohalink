@@ -30,6 +30,18 @@
 <div class="container-fluid" id="main">
     @include("inc.admin_nav")
 </div>
+@if ( $errors->count() > 0 )
+    <div class="container">
+    <div class="alert-danger">
+        @foreach( $errors->all() as $message )
+            <p>{{$message}}</p>
+        @endforeach
+    </div>
+</div>
+
+@endif
+
+
 <div class="container">
     @yield('content')
 </div>
