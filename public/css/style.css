@@ -442,6 +442,14 @@
 
 body,h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     font-family: "Myriad Pro";
+
+}
+body{
+    font-size:16px;
+}
+h1.mainH1{
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 .navbar-nav{
     margin-top:20px;
@@ -450,10 +458,16 @@ body,h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     background-image: url("../images/main-bcak.jpg");
     background-position: top center;
     background-repeat: no-repeat;
-    background-color: #0090a8;
-
+    padding-bottom: 140px;
+    margin-bottom: 30px;
+}
+#child{
+    background-image: url("../images/bg_deti.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
     padding-bottom: 140px;
 }
+
 .navbar{
     margin-bottom:20px;
     background-color: transparent;
@@ -528,6 +542,7 @@ h2{
     background-color: #1a1a1a;
     color:#fff;
     padding:20px 15px;
+    margin-top:30px;
 }
 .footer-menu{
     padding:50px 0;
@@ -663,7 +678,7 @@ h2{
 }
 .qwizBlock{
     border:7px solid #fff;
-    padding:20px 15px;
+    padding:80px 15px;
     color:#fff;
     text-align: center;
     margin: 10px 50px 10px;
@@ -677,8 +692,8 @@ h2{
 }
 .aboutQwiz{
     font-size: 24px;
-    margin-top:50px;
-    margin-bottom:70px;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 .qwizBtn{
@@ -689,13 +704,14 @@ height: 44px;
 box-sizing: border-box;
 border: 2px solid #fff;
 background: rgba(0,0,0,0.2) url(https://cdn-s-assets.arzamas.academy/assets/main-page/feature-arrow-cda9b0d9a45d54d5fcf89ab86350a4c79b8cea05efa3b53d86e2562f93889cef.svg) 50% 50% no-repeat;
-margin: 32px auto 60px;
+margin: 32px auto 10px;
 position: relative;
 -webkit-transition: all 0.1s linear;
 -moz-transition: all 0.1s linear;
 -ms-transition: all 0.1s linear;
 -o-transition: all 0.1s linear;
 transition: all 0.1s linear;
+border-radius: 0px;
 }
 .bx-wrapper {
     -moz-box-shadow: none;
@@ -710,6 +726,7 @@ transition: all 0.1s linear;
     background-repeat: no-repeat;
     padding:20px 0;
     margin-top:40px;
+    margin-bottom: -30px;
 }
 .videoCurse{
     position: relative;
@@ -1146,12 +1163,7 @@ body
 
 @media only screen and ( max-width: 32.5em ) /* 520 */
 {
-    body
-    {
-        -webkit-box-shadow: inset 0 0 9.375em rgba( 0, 0, 0, .5 ); /* 150 */
-        -moz-box-shadow: inset 0 0 9.375em rgba( 0, 0, 0, 5 ); /* 150 */
-        box-shadow: inset 0 0 9.375em rgba( 0, 0, 0, .5 ); /* 150 */
-    }
+
     #wrapper
     {
         width: 100%;
@@ -1186,7 +1198,11 @@ body
     font-weight:bold;
 }
 
-.thirty_persent_right, .fifty_persent_right, .seventy_persent_right, .hundred_right{
+.thirty_persent_right,
+.fifty_persent_right,
+.seventy_persent_right,
+.hundred_right,
+.answerThisDiv{
     display:none;
 }
 #quize .navbar{
@@ -1210,7 +1226,6 @@ body
 .quizeQues{
     text-align:center;
     background: #fff;
-    width: 760px;
     padding: 43px 50px 40px;
     box-sizing: border-box;
     position: relative;
@@ -1252,10 +1267,16 @@ body
     display: flex;
     padding:0 20px;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
 }
 .question{
     margin-bottom:20px;
+}
+.calendarImg {
+    background-image: linear-gradient(black 100%, rgb(0, 0, 0) 100%);
+}
+.calendarImg img{
+    opacity: 0.7;
 }
 
 
@@ -1277,16 +1298,20 @@ body
         padding:0;
         margin:2px 0;
         min-height:auto;
+        flex-wrap:wrap;
 
     }
+    .calendarDescription {
+    padding: 23px;
+    }
+
     .calenderDate{
-        order:-1;
-        padding-top: 40px;
-        background-color: #e5ecdc;
+
+
+
     }
     .calendarTitle{
-      width: 415%;
-      padding: 20px 0px 0px 10px;
+      padding: 20px 0px 0px 20px;
     }
     #main{
         padding-top:15px;
@@ -1354,6 +1379,7 @@ body
     }
     .answer{
         margin-bottom:20px;
+        padding: 0 50px 10px 0px;
     }
     .footer-menu
     {
@@ -1365,5 +1391,58 @@ body
     h2{
         font-size:33px;
     }
+    .calendarImg {
+    background-image: none;
+}
+.calendarImg img{
+    opacity: 1;
+}
+}
+input[type="radio"], input[type="checkbox"] {
+    width: 1em;
+    height: 1em;
+}
+.bx-viewport{
+    min-height: 500px;
+}
+.trueAnswer, .falseAnswer{
+    position:relative;
+    display:inline-block;
+}
+.quizeAnswer img{
+    margin:0 auto;
+    display:block;
+}
+.quizeAnswer > div{
+    padding-bottom:20px;
+}
+#podcast{
+    background-image: url("../images/bg_podcast.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-bottom: 140px;
 }
 
+/*.trueAnswer:before{
+    content: " ";
+    display: inline-block;
+    background-image: url('../images/icon_r.png');
+    background-size: cover;
+        width: 52px;
+    height: 51px;
+    position: absolute;
+    left: -60px;
+    top: -8px;
+
+}
+.falseAnswer:before{
+    content: " ";
+    display: inline-block;
+    background-image: url('../images/icon_n.png');
+    background-size: cover;
+    width: 52px;
+    height: 51px;
+    position: absolute;
+    left: -60px;
+    top: -8px;
+}*/

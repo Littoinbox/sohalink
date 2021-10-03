@@ -30,13 +30,13 @@
     <link href="/css/app.css" rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid" id="main">
+<div class="container-fluid" id="child">
 
         @include("inc.nav")
 
     <div class="container">
         <div class="bigLogo">
-            <h1 class="mainH1"><img src="/images/big-logo.png" class="img-responsive"> SakhaLink</h1>
+            <h1><img src="/images/logo_child.png" class="img-responsive"> SakhaLink</h1>
         </div>
     </div>
     <div class="qwizBlock">

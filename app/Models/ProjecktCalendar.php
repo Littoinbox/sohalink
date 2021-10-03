@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class ProjecktCalendar extends Model
 {
     use HasFactory;
+    protected $fillable = ['title', 'date_start', 'description', 'place', 'image'];
 }

@@ -49,7 +49,6 @@
             <a class="btn qwizBtn" href="/quize/1"></a>
         </div>
     </div>
-
 </div>
     <div class="container">
 
@@ -70,7 +69,7 @@
                 <li class="active"><a href="{{route('about')}}">О проекте</a></li>
                 <li><a href="#">Музейный зал</a></li>
                 <li><a href="{{route('childpage')}}">Детская страничка</a></li>
-                <li><a href="/podcast">Подкасты SakhaLink</a></li>
+                <li><a href="#">Подкасты SakhaLink</a></li>
             </ul>
         </div>
         <div class="col-xs-12 social">

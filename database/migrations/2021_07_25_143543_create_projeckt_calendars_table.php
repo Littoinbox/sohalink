@@ -19,6 +19,7 @@ class CreateProjecktCalendarsTable extends Migration
             $table->string('image')->nullable(true);
             $table->dateTime('date_start');
             $table->text('description');
+            $table->string('place');
             $table->timestamps();
         });
     }

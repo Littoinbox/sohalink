@@ -4,6 +4,8 @@
 
 
 
+
+
         <h2>Афиша событий</h2>
         <div class="calendarMap">
             <a href="#" class="calendarMapEv">Ближайшие</a>
@@ -51,7 +53,7 @@
 
             <div class="calendarItem">
             <div class="calendarImg">
-                <img src="/images/4.jpg" class="img-responsive">
+                <img src="/images/2.jpg" class="img-responsive">
             </div>
             <div class="calendarTitle">МЕЖДУНАРОДНЫЙ ДЕНЬ ЙОГИ</div>
             <div class="calenderDate">
@@ -161,7 +163,6 @@
 </div>
         <div class="container-fluid" id="video">
             <div class="container">
-                <h2 style="color:#fff; text-transform: uppercase;">коллаборации</h2>
                 <div class="videoCurses">
                     <div class="videoCurse">
                         <!--<div class="videoCurseImg">
@@ -173,7 +174,7 @@
                             </div>
                             <p>Описание курса</p>
                         </div>-->
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/A7W7AY8pVIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/A7W7AY8pVIs?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="videoCurse">
                         <!--<div class="videoCurseImg">
@@ -185,7 +186,7 @@
                             </div>
                             <p>Описание курса</p>
                         </div>-->
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/miBCtecf4BM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/miBCtecf4BM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="videoCurse">
                         <!--<div class="videoCurseImg">
@@ -197,7 +198,7 @@
                             </div>
                             <p>Описание курса</p>
                         </div>-->
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/_lKL6uPBME0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/_lKL6uPBME0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="videoCurse">
                         <!--<div class="videoCurseImg">
@@ -209,7 +210,7 @@
                             </div>
                             <p>Описание курса</p>
                         </div>-->
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/7XBnSJwZ7Tw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/7XBnSJwZ7Tw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div><!--
                     <div class="videoCurse">
                         <div class="videoCurseImg">
@@ -304,20 +305,4 @@
             </div>
         </div>
 
-<div class="container">
-    <div class="textInMain">
-        <h2>О проекте</h2>
-        <p>SakhaLink - это молодёжная платформа Сахалинской области для общения активных, неравнодушных, жаждущих развития и самореализации.</p>
-<h3>Здесь ты найдёшь:</h3>
-<ul>
-<li>афишу мероприятий, проходящих на территории Сахалинской области, в интерактивной таблице на сайте;</li>
-<li>обзоры крутых и современных проектов на островах в нашей группе в ВКонтакте;</li>
-<li>истории успеха сахалинских инфлюенсеров в Instagram;</li>
-<li>экспертный взгляд на социальные медиа в Telegram;</li>
-<li>образовательные онлайн семинары и лекции;</li>
-<li>новые знакомства и совместные коллаборации.</li>
-</ul>
-<p>Ты готов изменить свой взгляд на будущее? <br />Хочешь вести свой блог, развивать личный бренд или найти команду? Тебе важно быть в курсе новых трендов? Ты не боишься пробовать и рисковать?</p>
-<p>Тогда SakhaLink для тебя и про тебя!<br />Присоединяйся, общайся, делись новым!</p>
-    </div>
 @endsection

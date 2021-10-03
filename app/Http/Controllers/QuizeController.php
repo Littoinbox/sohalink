@@ -18,7 +18,7 @@ class QuizeController extends Controller
 
     function mainQuizeAjax($id, Request $req ){
         $question = DB::table('quize_test_questions')
-            ->select(array('question', 'answer', 'answerTrue'))
+            ->select(array('question', 'answer', 'answerTrue', 'lastTextAnswer'))
             ->where('id_quize', '=', $id)
             ->skip($req->step)
             ->take(1)

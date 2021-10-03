@@ -19,16 +19,30 @@
         var trueAnswer = 0;
         var rightAnswer = 0;
         $(document).on('click', '.quizeNext', function () {
-            if (step != 0) {
+            console.log($('.quizeAnswer').css('display'));
+            if (step != 0 && $('.quizeAnswer').css('display')!='block') {
                 var answer = $('.answerId:checked').val();
+                var answerText = '';
                 if (answer == undefined) {
                     alert('Вы не выбрали ответ!');
                     return false;
                 }
                 if (trueAnswer == answer) {
                     rightAnswer++;
+                    answerText ="<div><img src='/images/icon_r.png'>Верно</div>";
                 }
+                else {
+                    answerText ="<div><img src='/images/icon_n.png'>Неверно</div>";
+                }
+                var trueAnsverDiv = $('.answerThisDiv').html();
+                $('.quizeAnswer').html(answerText+trueAnsverDiv);
+                
+                $('.question').css('display', 'none');
+                $('.answers').css('display', 'none');
+                $('.quizeAnswer').css('display', 'block');
+                $('.quizeNext').html('Следующий вопрос');
             }
+            else {
             $.ajax({
                 method: "POST",
                 url: "/quize/" + $('.idQuize').val(),
@@ -65,17 +79,26 @@
                         var html = '<div class="question">' + $resp[0].question + '</div>';
                         html += "<div class='answers'>";
                         for (var i = 0; i < $resp[0].answer.length; i++) {
-                            html += "<div class='answer'><input type='radio' value='" + parseInt(i + 1) + "' " +
-                                "class='answerId' name='answerId'>" + $resp[0].answer[i] + "</div>";
+                             html += "<div class='answer'><div class='col-xs-1'><input type='radio' value='" + parseInt(i + 1) + "' " +
+                                "class='answerId' name='answerId'></div><div class='col-xs-11'>" + $resp[0].answer[i] + "</div></div>";
                         }
-                        html += "</div>";
+                        if ($resp[0].lastTextAnswer==null)
+                        {
+                            $resp[0].lastTextAnswer='';
+                        }
+                        html += "</div><div class='answerThisDiv'>"+$resp[0].lastTextAnswer+"</div><div class='quizeAnswer' "
+                        + "style='display:none'></div>";
+                        
+                        $('.answers').css('display', 'block');
+                        $('.quizeAnswer').css('display', 'none');
                         $('.quize').html(html);
-                        $('.quizeNext').html('Следующий вопрос');
+                        $('.quizeNext').html('Ответить на вопрос');
                         step++;
 
                     }
                 }
             });
+            }
             return false;
         });
 

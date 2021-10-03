@@ -14,7 +14,25 @@ class ProjectCalendarsControllers extends Controller
     function addProjeckt(){
         return view('Admin/AddProjeckt');
     }
-    function addProjecktData(Request $request){
+    function addProjecktPost(Request $request){
+        $val = $request->validate(
+            ['title'=>'required',
+                'date_start'=>'required|date']
+        );
+        $data = $request->all();
+        $img = $request->file('img');
+        if (!empty($img)) {
+            $imgSrc =$img->move("/upload/queize/", $img->getClientOriginalName());
+            $data['image']=$imgSrc;
+        }
+        else {
+            logger('Файл не загрузился!');
+        }
+
+
+        $prj = ProjecktCalendar::create($data);
+        dd($prj);
+
 
     }
     function editProjeckt($id)

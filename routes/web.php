@@ -47,4 +47,43 @@ Route::get('/childpage', function () {
 Route::get("/quize/test", [\App\Http\Controllers\QuizeController::class, 'test']);
 Route::get("/quize/{id}", [\App\Http\Controllers\QuizeController::class, 'mainQuize']);
 Route::post("/quize/{id}", [\App\Http\Controllers\QuizeController::class, 'mainQuizeAjax']);
+Route::get("/about", function () {
+    return view('about', array('title' => 'SakhaLink - О проекте',
+                               'mainId'=>'about'));
+})->name('about');
 
+Route::get("/podcast/", function(){
+    return view('podkast', array('title' => 'SakhaLink - Подкасты',
+                                'mainId'=>'podcast',
+                                'logoSrc'=>"/images/big-logo.png"));
+})->name('podcast');
+
+Route::get("/schoolBlog/", function(){
+    return view('schoolBlog', array('title' => 'SakhaLink - Школа блогеров',
+        'mainId'=>'podcast',
+        'logoSrc'=>"/images/big-logo.png"));
+})->name('schoolBlog');
+
+Route::get("/day/", function(){
+    return view('day', array('title' => 'SakhaLink - Дни',
+        'mainId'=>'podcast',
+        'logoSrc'=>"/images/big-logo.png"));
+})->name('day');
+
+Route::get("/work", function(){
+    return view('work', array('title' => 'SakhaLink - Отчетные работы',
+        'mainId'=>'podcast',
+        'logoSrc'=>"/images/big-logo.png"));
+})->name('work');
+Route::get("/sahounb", function(){
+    return view('sahounb', array('title' => 'SakhaLink - СахОУНБ',
+        'mainId'=>'podcast',
+        'logoSrc'=>"/images/big-logo.png"));
+})->name('sahounb');
+Route::get("/kraeved", function(){
+    return view('kraeved', array('title' => 'SakhaLink - Краеведы ОТВ',
+        'mainId'=>'podcast',
+        'logoSrc'=>"/images/big-logo.png"));
+})->name('kraeved');
+
+//СахОУНБ
