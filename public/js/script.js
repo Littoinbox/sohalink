@@ -6,9 +6,9 @@
             auto: true,
             pause: 10000,
             minSlides: 1,
-            maxSlides: 3,
-            slideMargin: 45,
-            slideWidth: 350,
+            maxSlides: 1,
+
+
 
 
         });
@@ -36,7 +36,7 @@
                 }
                 var trueAnsverDiv = $('.answerThisDiv').html();
                 $('.quizeAnswer').html(answerText+trueAnsverDiv);
-                
+
                 $('.question').css('display', 'none');
                 $('.answers').css('display', 'none');
                 $('.quizeAnswer').css('display', 'block');
@@ -88,7 +88,7 @@
                         }
                         html += "</div><div class='answerThisDiv'>"+$resp[0].lastTextAnswer+"</div><div class='quizeAnswer' "
                         + "style='display:none'></div>";
-                        
+
                         $('.answers').css('display', 'block');
                         $('.quizeAnswer').css('display', 'none');
                         $('.quize').html(html);

@@ -16,7 +16,10 @@
 
     <!-- Scripts -->
     <script src="/js/jquery.min.js"></script>
+    <script src="/js/admin/moment-with-locales.js"></script>
+    <script src="/js/admin/bootstrap-datetimepicker.min.js"></script>
     <script src="/js/bootstrap.js"></script>
+    <script src="/js/admin/tiny.js"></script>
     <script src="/js/admin/script.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,6 +27,9 @@
 
     <!-- Styles -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/admin/bootstrap-datetimepicker-standalone.css" rel="stylesheet">
+    <link href="/css/admin/bootstrap-theme.css" rel="stylesheet">
+    <link href="/css/admin/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="/css/admin/style.css" rel="stylesheet">
 </head>
 <body>

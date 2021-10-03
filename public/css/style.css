@@ -1422,7 +1422,114 @@ input[type="radio"], input[type="checkbox"] {
     background-repeat: no-repeat;
     padding-bottom: 140px;
 }
+#blog{
+    background-image: url("../images/bg_blog.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-bottom: 140px;
+}
+#kraeved{
+    background-image: url("../images/bg_kraev.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding-bottom: 140px;
+}
+.eventDayly:after{
+    display:block;
+    width:100%;
+    border-bottom:1px solid #000;
+    padding:20px 0;
+    content:"";
 
+}
+.eventDayly:first-child::before{
+    display:block;
+    width:100%;
+    border-bottom:1px solid #000;
+    margin-top:-20px;
+    content:"";
+
+}
+.date-map{
+    padding: 20px 0;
+}
+.date-map:after{
+    content:"";
+    display:block;
+    clear: both;
+}
+.dateEvent{
+    font-size:50px;
+    text-align: center;
+    font-weight:bold;
+}
+.titleEvent{
+    font-size: 24px;
+    padding-top: 50px;
+    color:#000;
+}
+.titleEvent a{
+    color:#000;
+}
+.timeEvent{
+    font-size:22px;
+    font-weight:normal;
+    display:block;
+}
+.right{
+    text-align:right;
+}
+.monthViwe{
+    font-size:30px;
+    font-weight: bold;
+}
+.prev_month, .next_month{
+    font-size:20px;
+    position:relative
+}
+.prev_month{
+    display:inline-block;
+    margin-right: 20px;
+}
+.prev_month:before{
+    content: "\e257";
+    display:inline-block;
+    font-family: "Glyphicons Halflings";
+    margin-right:10px;
+    position: absolute;
+    left: -30px;
+}
+.next_month:after{
+    content: "\e258";
+    display:inline-block;
+    font-family: "Glyphicons Halflings";
+    margin-left:10px;
+    position: absolute;
+    right: -30px;
+}
+.eventDayly{
+    padding-top:20px;
+}
+.afisha{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.eventBlog{
+    color:#000;
+}
+.allEvents{
+    text-align: center;
+}
+a.allEvents{
+    padding:15px 40px;
+    background-color: #000;
+    color:#fff;
+    border-radius: 30px;
+}
+a.allEvents:hover{
+    color:#fff;
+    text-decoration:underline;
+}
 /*.trueAnswer:before{
     content: " ";
     display: inline-block;

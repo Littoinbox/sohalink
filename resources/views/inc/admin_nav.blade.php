@@ -12,14 +12,11 @@
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <li class="active"><a href="/">На сайт</a></li>
-            <li><a href="{{ route('AdminMain') }}">Главна</a></li>
-            <li><a href="{{ route('AdminQuize') }}">Квизы</a></li>
+            <li><a href="{{ route('AdminMain') }}">Главная</a></li>
+            <!--<li><a href="{{ route('AdminQuize') }}">Квизы</a></li>-->
             <li><a href="{{ route('AdminCalendar') }}">Календарь событий</a></li>
 
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><button class="login" aria-label="Личный кабинет" type="button"></button></li>
-            <li><button class="search" aria-label="Поиск" type="button"></button></li>
-        </ul>
+
     </div>
 </div>

@@ -13,17 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main', array('title' => 'SakhaLink - молодёжная платформа Сахалинской области'));
-});
+Route::get('/', [\App\Http\Controllers\MainController::class, 'index']
+//function () {
+
+   // return view('main', array('title' => 'SakhaLink - молодёжная платформа Сахалинской области'));
+//}
+);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', function(){
+   return redirect(route('AdminMain'));
 
-Route::get('/event/1', function () {
-    return view('event1', array('title' => 'SakhaLink - День молодежи России'));
-});
+})->name('home');
+
+Route::get('/event/{id}', [\App\Http\Controllers\ProjectCalendarsControllers::class, 'event']
+
+);
+
 
 Route::group(['middleware' => ['role:admin']], function () {
     Route::get("/admin", [App\Http\Controllers\Admin\AdminControllers::class, "index"])->name('AdminMain');
@@ -70,24 +77,26 @@ Route::get("/schoolBlog/", function(){
 
 Route::get("/day/", function(){
     return view('day', array('title' => 'SakhaLink - Дни',
-        'mainId'=>'podcast',
+        'mainId'=>'blog',
         'logoSrc'=>"/images/big-logo.png"));
 })->name('day');
 
 Route::get("/work", function(){
     return view('work', array('title' => 'SakhaLink - Отчетные работы',
-        'mainId'=>'podcast',
+        'mainId'=>'blog',
         'logoSrc'=>"/images/big-logo.png"));
 })->name('work');
 Route::get("/sahounb", function(){
     return view('sahounb', array('title' => 'SakhaLink - СахОУНБ',
-        'mainId'=>'podcast',
+        'mainId'=>'kraeved',
         'logoSrc'=>"/images/big-logo.png"));
 })->name('sahounb');
 Route::get("/kraeved", function(){
     return view('kraeved', array('title' => 'SakhaLink - Краеведы ОТВ',
-        'mainId'=>'podcast',
+        'mainId'=>'kraeved',
         'logoSrc'=>"/images/big-logo.png"));
 })->name('kraeved');
+Route::get("/allevents",  [\App\Http\Controllers\ProjectCalendarsControllers::class, 'index']
 
+)->name('allEvents');
 //СахОУНБ

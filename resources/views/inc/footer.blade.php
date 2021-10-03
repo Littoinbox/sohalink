@@ -5,9 +5,8 @@
         <div class="col-xs-12">
             <ul class="footer-menu">
                 <li class="active"><a href="{{route('about')}}">О проекте</a></li>
-                <li><a href="#">Музейный зал</a></li>
                 <li><a href="{{route('childpage')}}">Детская страничка</a></li>
-                <li><a href="#">Подкасты SakhaLink</a></li>
+                <li><a href="{{route('podcast')}}">Подкасты SakhaLink</a></li>
             </ul>
         </div>
         <div class="col-xs-12 social">

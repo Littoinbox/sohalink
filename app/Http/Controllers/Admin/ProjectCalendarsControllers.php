@@ -52,8 +52,36 @@ class ProjectCalendarsControllers extends Controller
         return view('Admin/AddProjeckt', ['element' => $element]);
     }
 
-    function editProjecktData($id)
+    function editProjecktPost($id, Request $request)
     {
+        $val =Validator::make($request->all(), ['title'=>'required',
+            'date_start'=>'required|date'], []
 
+
+        );
+        if ($val->fails())
+        {
+            return redirect('/admin/editProjeckt/'.$id)
+                ->withErrors($val)
+                ->withInput();
+        }
+
+        $data = $request->except(['_method','_token']);
+        $img = $request->file('img');
+        $element = ProjecktCalendar::find($id);
+        if (!empty($img)) {
+            $imgSrc = $img->store("/projeckt", 'public');
+            $data['image']=$imgSrc;
+        }
+        else {
+            $data['image']=$element->image;
+        }
+        ProjecktCalendar::whereId($id)->update($data);
+        return redirect()->route('AdminCalendar');
+    }
+    function delProjeckt($id)
+    {
+        ProjecktCalendar::whereId($id)->delete();
+        return redirect()->route('AdminCalendar');
     }
 }

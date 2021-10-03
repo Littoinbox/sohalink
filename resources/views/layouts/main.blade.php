@@ -7,7 +7,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{$title}}</title>
+    <title>@if (!empty($title))
+            {{$title}}
+            @else
+            SakhaLink
+        @endif
+    </title>
 
     <!-- Scripts -->
     <script src="/js/jquery.min.js"></script>
@@ -68,7 +73,7 @@
         <div class="col-xs-12">
             <ul class="footer-menu">
                 <li class="active"><a href="{{route('about')}}">О проекте</a></li>
-                <li><a href="#">Музейный зал</a></li>
+
                 <li><a href="{{route('childpage')}}">Детская страничка</a></li>
                 <li><a href="/podcast">Подкасты SakhaLink</a></li>
             </ul>

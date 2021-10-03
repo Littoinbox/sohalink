@@ -37,20 +37,22 @@
 
     });
 
-
-
-
-
-
-
-
-
-    function countAnswer(){
+       function countAnswer(){
         var i = 1;
         $('.answerTrue').each( function(){
             $(this).val(i);
             i++;
         });
     }
+    $(window).on('load', function(){
+        $('#datetimepicker1').datetimepicker({
+            locale: 'ru',
+            format: 'YYYY-MM-DD HH:mm:ss',
+        });
+        tinymce.init({
+            selector: '#description'
+        });
+
+    });
 
 })(jQuery);

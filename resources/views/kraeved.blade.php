@@ -1,6 +1,6 @@
 @extends('layouts.page')
 
 @section('content')
-    <h1 class="skazki">Отчетные работы</h1>
+    <h1 class="skazki">Краеведы</h1>
 
 @endsection
